@@ -1,0 +1,39 @@
+.todoForm {
+    display: flex;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.todoInput {
+    flex: 12;
+    margin-right: 12px;
+}
+
+.todoInput input {
+    width: 100%;
+    outline-color: #81ecec;
+    color: rgb(143, 141, 141);
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.buttonAdd {
+    flex: 1;
+}
+
+.buttonAdd button {
+    background-color: #fff;
+    border: none;
+    width: 80px;
+    padding: 11px;
+    border-radius: 2px;
+    font-size: 12px;
+    outline: none;
+    color: #969494;
+    border: 1px solid #969494;
+}
+
+.buttonAdd button:hover {
+    border: 1px solid #747373; 
+    color: #747373;
+}

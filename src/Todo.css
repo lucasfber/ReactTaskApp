@@ -1,0 +1,42 @@
+.todo {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+}
+
+.todo input[type='checkbox'] {
+    flex: 1;
+    color: pink;
+}
+
+.todo p {
+    flex: 10;
+    font-size: 18px;
+    color: rgb(139, 138, 138);
+    font-weight: bold;
+}
+
+p.done {
+    text-decoration: line-through;
+    color: rgb(218, 55, 55);
+    font-style: italic;
+}
+
+.todo button {
+    flex: 1;
+    border: none;
+    background-color: rgb(218, 55, 55);
+    color: rgb(245, 241, 241);
+    width: 80px;
+    padding: 11px;
+    border-radius: 3px;
+    font-size: 12px;
+    outline: none;
+    font-weight: bold;
+}
+
+.todo button:hover {
+    background-color: rgb(208,0,0);
+    color: #fff;
+}

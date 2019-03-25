@@ -1,0 +1,9 @@
+.header {
+    background-color: rgb(128, 204, 240);
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.header h1 {
+    color: #fff;
+}

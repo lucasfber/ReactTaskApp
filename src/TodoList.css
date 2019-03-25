@@ -1,0 +1,14 @@
+.todoList {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 12px;
+}
+
+.todoList ol {
+    list-style-type: none;
+}
+
+.todoList ol li {
+    padding: 12px 0;
+}
