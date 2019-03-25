@@ -1,16 +1,16 @@
-.todo {
+.task {
     display: flex;
     align-items: center;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
-.todo input[type='checkbox'] {
+.task input[type='checkbox'] {
     flex: 1;
     color: pink;
 }
 
-.todo p {
+.task p {
     flex: 10;
     font-size: 18px;
     color: rgb(139, 138, 138);
@@ -23,7 +23,7 @@ p.done {
     font-style: italic;
 }
 
-.todo button {
+.task button {
     flex: 1;
     border: none;
     background-color: rgb(218, 55, 55);
@@ -36,7 +36,7 @@ p.done {
     font-weight: bold;
 }
 
-.todo button:hover {
+.task button:hover {
     background-color: rgb(208,0,0);
     color: #fff;
 }

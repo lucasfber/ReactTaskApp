@@ -1,18 +1,18 @@
 import React from "react";
 
-import Todo from './Todo';
-import './TodoList.css';
+import Task from './Task';
+import './TaskList.css';
 
 const TodoList = (props) => {
   return (
     <div className='todoList'>
       <ol>
-        {props.todos.map(todo => (
-          <li key={todo.id}>
-            <Todo
+        {props.tasks.map(task => (
+          <li key={task.id}>
+            <Task
             onDelete={props.onDelete} 
-            onMarkTodoAsDone={props.onMarkAsDone}
-            todo={todo} />
+            onMarkTaskAsDone={props.onMarkAsDone}
+            task={task} />
           </li>
         ))}
       </ol>

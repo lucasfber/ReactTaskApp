@@ -2,15 +2,15 @@ import React, { Component } from "react";
 
 import "./App.css";
 import Header from './Header';
-import TodoForm from './TodoForm';
-import TodoList from "./TodoList";
+import TodoForm from './TaskForm';
+import TodoList from "./TaskList";
 
 
 export default class App extends Component {
 
   state = {
     title: '',
-    todos: [ 
+    tasks: [ 
       {id: 1, title: 'Wash car', done: false},
       {id: 2, title: 'Clean my bedroom', done: false}
     ]
@@ -25,7 +25,7 @@ export default class App extends Component {
     if(!this.state.title) {
       return;
     }
-    const newTodo = {
+    const newTask = {
       id: Math.random(),
       title: this.state.title,
       done: false
@@ -33,29 +33,21 @@ export default class App extends Component {
 
     this.setState({
       title: '',
-      todos: this.state.todos.concat([newTodo])
+      tasks: this.state.tasks.concat([newTask])
     });
   }
 
   handleDelete = (id) => {
-    console.log(id);
-    console.log(this.state.todos);
-    const todos = this.state.todos.filter(todo => todo.id !== id);
-    console.log(todos);
-    this.setState({todos: todos}); 
+    const tasks = this.state.tasks.filter(todo => todo.id !== id);
+    this.setState({tasks: tasks}); 
   } 
 
   handleMarkAsDone = (id) => {
-    /* Percorrer o array de Tarefas 
-       pegar a tarefa com o id igual ao que estamos passando
-       alternar o estado de concluido (se false, true; se true, false)
-       atualizar o estado
-    */
-    let todoToToggle = this.state.todos.filter(todo => todo.id === id)[0];
-    let index = this.state.todos.indexOf(todoToToggle);
-    const newTodosArray = [...this.state.todos];
-    newTodosArray[index].done = !todoToToggle.done;
-    this.setState({ todos: newTodosArray, ...this.state}); 
+    let taskToToggle = this.state.tasks.filter(task => task.id === id)[0];
+    let index = this.state.tasks.indexOf(taskToToggle);
+    const tasks = [...this.state.tasks];
+    tasks[index].done = !taskToToggle.done;
+    this.setState({ tasks, ...this.state}); 
   }
 
   render() {
@@ -69,7 +61,7 @@ export default class App extends Component {
         <TodoList
           onDelete={this.handleDelete} 
           onMarkAsDone={this.handleMarkAsDone}
-          todos={this.state.todos}/>
+          tasks={this.state.tasks}/>
       </div>
     );
   }
